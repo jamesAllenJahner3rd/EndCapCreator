@@ -1,0 +1,31 @@
+html{
+    font-size: 62.5%;
+}
+nav{
+    
+    background-color: #125dd0;
+}
+form{
+    background-color: #fff;
+}
+body{
+    font-size: 3rem;
+    background-color: #b5b5b7;
+}
+input{
+    background-color: #fff;
+    border:1px solid #000;
+    border-radius: 5rem;
+}
+button,select,input{
+    font-size:3rem;
+}
+/*Base Styles*/
+
+/*Layout*/
+
+/*Sizes*/
+
+/*Skin Styles*/
+
+/*Utility Classes*/

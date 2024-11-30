@@ -1,0 +1,424 @@
+{
+    "inventoryToys": [
+        {
+            "name": "LEGO Star Wars Millennium Falcon",
+            "manufacturer": "LEGO",
+            "cost": 149.99,
+            "profit": 10.00,
+            "price": 159.99,
+            "weight": 4.0,
+            "height": 15.0,
+            "width": 20.0,
+            "depth": 6.0,
+            "onHand": 50,
+            "salesFloorCount": 20,
+            "backroomCount": 30,
+            "SKU": 123456789,
+            "UPC": 123456789012,
+            "supplier": "LEGO Group",
+            "shippingWeight": 5.0,
+            "packageDimensions": 15.0,
+            "casePack": 10,
+            "department": "Toys",
+            "category": "Building Sets",
+            "color": "Multicolor",
+            "salesFloorLocation": [
+                "A12-03, 1234-5678"
+            ],
+            "backroomLocation": [
+                "B02/010/005"
+            ],
+            "shelfCapQuantity": 20
+        },
+        {
+            "name": "Hot Wheels Super Ultimate Garage",
+            "manufacturer": "Mattel",
+            "cost": 99.99,
+            "profit": 10.00,
+            "price": 109.99,
+            "weight": 10.0,
+            "height": 28.0,
+            "width": 20.0,
+            "depth": 8.0,
+            "onHand": 30,
+            "salesFloorCount": 15,
+            "backroomCount": 15,
+            "SKU": 345678901,
+            "UPC": 345678901234,
+            "supplier": "Mattel, Inc.",
+            "shippingWeight": 11.0,
+            "packageDimensions": 29.0,
+            "casePack": 6,
+            "department": "Toys",
+            "category": "Vehicles",
+            "color": "Blue",
+            "salesFloorLocation": [
+                "C13-05, 3234-5680"
+            ],
+            "backroomLocation": [
+                "D04/030/007"
+            ],
+            "shelfCapQuantity": 12
+        },
+        {
+            "name": "Fisher-Price Laugh & Learn Smart Stages Chair",
+            "manufacturer": "Fisher-Price",
+            "cost": 49.99,
+            "profit": 10.00,
+            "price": 59.99,
+            "weight": 6.0,
+            "height": 18.0,
+            "width": 18.0,
+            "depth": 18.0,
+            "onHand": 40,
+            "salesFloorCount": 20,
+            "backroomCount": 20,
+            "SKU": 456789012,
+            "UPC": 456789012345,
+            "supplier": "Fisher-Price",
+            "shippingWeight": 7.0,
+            "packageDimensions": 19.0,
+            "casePack": 8,
+            "department": "Toys",
+            "category": "Learning Toys",
+            "color": "Yellow",
+            "salesFloorLocation": [
+                "D14-06, 4234-5681"
+            ],
+            "backroomLocation": [
+                "E05/040/008"
+            ],
+            "shelfCapQuantity": 16
+        },
+        {
+            "name": "NERF Elite 2.0 Echo CS-10 Blaster",
+            "manufacturer": "Hasbro",
+            "cost": 29.99,
+            "profit": 5.00,
+            "price": 34.99,
+            "weight": 2.5,
+            "height": 12.0,
+            "width": 24.0,
+            "depth": 4.0,
+            "onHand": 60,
+            "salesFloorCount": 25,
+            "backroomCount": 35,
+            "SKU": 567890123,
+            "UPC": 567890123456,
+            "supplier": "Hasbro, Inc.",
+            "shippingWeight": 3.0,
+            "packageDimensions": 13.0,
+            "casePack": 12,
+            "department": "Toys",
+            "category": "Blasters",
+            "color": "Blue",
+            "salesFloorLocation": [
+                "E15-07, 5234-5682"
+            ],
+            "backroomLocation": [
+                "F06/050/009"
+            ],
+            "shelfCapQuantity": 18
+        },
+        {
+            "name": "FurReal Friends J.J. My Jumpin' Pug",
+            "manufacturer": "Hasbro",
+            "cost": 19.99,
+            "profit": 15.00,
+            "price": 34.99,
+            "weight": 1.5,
+            "height": 10.0,
+            "width": 10.0,
+            "depth": 5.0,
+            "onHand": 25,
+            "salesFloorCount": 15,
+            "backroomCount": 10,
+            "SKU": 890123456,
+            "UPC": 890123456789,
+            "supplier": "Hasbro, Inc.",
+            "shippingWeight": 2.0,
+            "packageDimensions": 11.0,
+            "casePack": 6,
+            "department": "Toys",
+            "category": "Interactive Pets",
+            "color": "Brown",
+            "salesFloorLocation": [
+                "G12-06, 1234-5673"
+            ],
+            "backroomLocation": [
+                "I03/040/005"
+            ],
+            "shelfCapQuantity": 12
+        },
+        {
+            "name": "Crayola Inspiration Art Case",
+            "manufacturer": "Crayola",
+            "cost": 24.99,
+            "profit": 15.00,
+            "price": 39.99,
+            "weight": 3.0,
+            "height": 15.0,
+            "width": 12.0,
+            "depth": 2.0,
+            "onHand": 50,
+            "salesFloorCount": 25,
+            "backroomCount": 25,
+            "SKU": 901234567,
+            "UPC": 901234567890,
+            "supplier": "Crayola, LLC",
+            "shippingWeight": 3.5,
+            "packageDimensions": 16.0,
+            "casePack": 10,
+            "department": "Toys",
+            "category": "Arts & Crafts",
+            "color": "Multicolor",
+            "salesFloorLocation": [
+                "H11-07, 1345-5674"
+            ],
+            "backroomLocation": [
+                "J04/050/006"
+            ],
+            "shelfCapQuantity": 20
+        },
+        {
+            "name": "NERF Ultra One Motorized Blaster",
+            "manufacturer": "Hasbro",
+            "cost": 34.99,
+            "profit": 25.00,
+            "price": 59.99,
+            "weight": 3.5,
+            "height": 11.0,
+            "width": 24.0,
+            "depth": 5.0,
+            "onHand": 40,
+            "salesFloorCount": 20,
+            "backroomCount": 20,
+            "SKU": 789012345,
+            "UPC": 789012345678,
+            "supplier": "Hasbro, Inc.",
+            "shippingWeight": 4.0,
+            "packageDimensions": 12.0,
+            "casePack": 8,
+            "department": "Toys",
+            "category": "Blasters",
+            "color": "Orange",
+            "salesFloorLocation": [
+                "E10-05, 13-072"
+            ],
+            "backroomLocation": [
+                "H02/030/004"
+            ],
+            "shelfCapQuantity": 16
+        },
+        {
+            "name": "Barbie Dreamhouse",
+            "manufacturer": "Mattel",
+            "cost": 179.99,
+            "profit": 70.00,
+            "price": 249.99,
+            "weight": 15.0,
+            "height": 30.0,
+            "width": 24.0,
+            "depth": 8.0,
+            "onHand": 20,
+            "salesFloorCount": 10,
+            "backroomCount": 10,
+            "SKU": 234567890,
+            "UPC": 234567890123,
+            "supplier": "Mattel, Inc.",
+            "shippingWeight": 16.0,
+            "packageDimensions": 32.0,
+            "casePack": 5,
+            "department": "Toys",
+            "category": "Dolls",
+            "color": "Pink",
+            "salesFloorLocation": [
+                "B12-04, 04-079"
+            ],
+            "backroomLocation": [
+                "C03/020/006"
+            ],
+            "shelfCapQuantity": 10
+        },
+        {
+            "name": "Play-Doh 36-Can Mega Pack",
+            "manufacturer": "Hasbro",
+            "cost": 14.99,
+            "profit": 10.00,
+            "price": 24.99,
+            "weight": 5.0,
+            "height": 9.0,
+            "width": 12.0,
+            "depth": 4.0,
+            "onHand": 75,
+            "salesFloorCount": 30,
+            "backroomCount": 45,
+            "SKU": 678901234,
+            "UPC": 678901234567,
+            "supplier": "Hasbro, Inc.",
+            "shippingWeight": 6.0,
+            "packageDimensions": 10.0,
+            "casePack": 15,
+            "department": "Toys",
+            "category": "Arts & Crafts",
+            "color": "Multicolor",
+            "salesFloorLocation": [
+                "F11-02, 03-070"
+            ],
+            "backroomLocation": [
+                "G01/020/003"
+            ],
+            "shelfCapQuantity": 25
+        },
+        {
+            "name": "Monopoly Classic Game",
+            "manufacturer": "Hasbro",
+            "cost": 19.99,
+            "profit": 10.00,
+            "price": 29.99,
+            "weight": 2.5,
+            "height": 10.5,
+            "width": 15.8,
+            "depth": 2.0,
+            "onHand": 40,
+            "salesFloorCount": 20,
+            "backroomCount": 20,
+            "SKU": 112233445,
+            "UPC": 112233445566,
+            "supplier": "Hasbro, Inc.",
+            "shippingWeight": 3.0,
+            "packageDimensions": 10.6,
+            "casePack": 10,
+            "department": "Toys",
+            "category": "Board Games",
+            "color": "Multicolor",
+            "salesFloorLocation": [
+                "H10-01, 04-071"
+            ],
+            "backroomLocation": [
+                "I02/010/001"
+            ],
+            "shelfCapQuantity": 12
+        },
+        {
+            "name": "Playmobil Pirates Island",
+            "manufacturer": "Playmobil",
+            "cost": 29.99,
+            "profit": 20.00,
+            "price": 49.99,
+            "weight": 3.0,
+            "height": 14.0,
+            "width": 18.0,
+            "depth": 3.0,
+            "onHand": 25,
+            "salesFloorCount": 15,
+            "backroomCount": 10,
+            "SKU": 223344556,
+            "UPC": 223344556677,
+            "supplier": "Playmobil USA, Inc.",
+            "shippingWeight": 3.5,
+            "packageDimensions": 14.5,
+            "casePack": 6,
+            "department": "Toys",
+            "category": "Building Sets",
+            "color": "Multicolor",
+            "salesFloorLocation": [
+                "H11-02, 04-072"
+            ],
+            "backroomLocation": [
+                "I03/020/002"
+            ],
+            "shelfCapQuantity": 14
+        },
+        {
+            "name": "Tonka Steel Classic Mighty Dump Truck",
+            "manufacturer": "Tonka",
+            "cost": 24.99,
+            "profit": 15.00,
+            "price": 39.99,
+            "weight": 4.0,
+            "height": 12.0,
+            "width": 17.0,
+            "depth": 8.0,
+            "onHand": 35,
+            "salesFloorCount": 15,
+            "backroomCount": 20,
+            "SKU": 334455667,
+            "UPC": 334455667788,
+            "supplier": "Funrise, Inc.",
+            "shippingWeight": 4.5,
+            "packageDimensions": 12.5,
+            "casePack": 8,
+            "department": "Toys",
+            "category": "Vehicles",
+            "color": "Yellow",
+            "salesFloorLocation": [
+                "H12-03, 04-073"
+            ],
+            "backroomLocation": [
+                "I04/030/003"
+            ],
+            "shelfCapQuantity": 16
+        },
+        {
+            "name": "Magic: The Gathering Core Set 2021 Booster Box",
+            "manufacturer": "Wizards of the Coast",
+            "cost": 79.99,
+            "profit": 40.00,
+            "price": 119.99,
+            "weight": 2.0,
+            "height": 5.0,
+            "width": 8.0,
+            "depth": 3.0,
+            "onHand": 20,
+            "salesFloorCount": 10,
+            "backroomCount": 10,
+            "SKU": 445566778,
+            "UPC": 445566778899,
+            "supplier": "Wizards of the Coast",
+            "shippingWeight": 2.5,
+            "packageDimensions": 5.5,
+            "casePack": 5,
+            "department": "Toys",
+            "category": "Trading Cards",
+            "color": "Multicolor",
+            "salesFloorLocation": [
+                "H13-04, 5234-5674"
+            ],
+            "backroomLocation": [
+                "I05/040/004"
+            ],
+            "shelfCapQuantity": 10
+        },
+        {
+            "name": "Melissa & Doug Wooden Building Blocks Set",
+            "manufacturer": "Melissa & Doug",
+            "cost": 19.99,
+            "profit": 15.00,
+            "price": 34.99,
+            "weight": 5.0,
+            "height": 8.0,
+            "width": 12.0,
+            "depth": 4.0,
+            "onHand": 45,
+            "salesFloorCount": 25,
+            "backroomCount": 20,
+            "SKU": 556677889,
+            "UPC": 556677889900,
+            "supplier": "Melissa & Doug",
+            "shippingWeight": 5.5,
+            "packageDimensions": 8.5,
+            "casePack": 10,
+            "department": "Toys",
+            "category": "Building Sets",
+            "color": "Wood",
+            "salesFloorLocation": [
+                "H14-05, 6234-5675"
+            ],
+            "backroomLocation": [
+                "I06/050/005"
+            ],
+            "shelfCapQuantity": 18
+        }
+    ]
+}
