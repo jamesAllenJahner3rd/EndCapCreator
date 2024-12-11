@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventory Api</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nogit rmalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
     <Nav><button>&lt</button><span>EndCap Creator</span><button>&#9740</button><button>Print</button></Nav>
-    <form action="/checkInventory/" method="get">
+    <form id="volumeForm">      
         <label for="heightSelect">Endcap Height</label>
         <select name="height" id="heightSelect">
             <option value="71" selected>71"</option>
@@ -30,13 +30,15 @@
             <option value ="16" >16"</option>
             <option value="14" selected>14"</option>
         </select>
-        <input type="submit" value="Check stock">
-    </form>
+        
+            <input type="submit" value="Check stock">
+     </form>
      <caption>Items available</caption>
-    <table id='responseMenu'>
+    <ol id='responseMenu'>
+        
        
 
-    </table>
+    </ol>
     <script type="text/javascript" src='js/main.js'></script>
 </body>
 </html>
