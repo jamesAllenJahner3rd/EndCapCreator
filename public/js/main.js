@@ -8,6 +8,10 @@ document.getElementById("volumeForm").onsubmit = async(event) => {
     let width = document.getElementById("shelfWidthSelect").value;
     let depth = document.getElementById("shelfDepthSelect").value;
     let shelfVolume  = depth*width*2.5;
+    let USDollar = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
     let volume = height*width*depth;
     try{
         console.log("await response");
@@ -18,10 +22,14 @@ document.getElementById("volumeForm").onsubmit = async(event) => {
             
             data.forEach((item) => {
                 let lineItem = document.createElement('li');
+                console.log(lineItem);
                 let button = document.createElement("button");
-                let newContent = document.createTextNode( `${item.Name} Margin:${item.profit}`)
+                console.log(button);
+                let newContent = document.createTextNode( `${item.name} Margin: ${USDollar.format(item.profit)}`)
+                console.log(newContent);
                 lineItem.appendChild( newContent);
-                document.orderedList.appendChild( lineItem );
+                console.log(lineItem);
+                orderedList.appendChild( lineItem );
             });
     }catch(err){
         console.error('Error', err);
