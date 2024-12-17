@@ -44,9 +44,9 @@ time{
 }
 time{
 
-    align-self: bottom;
-    text-align:center;
-    color: green;
+    /* align-self: bottom;
+    text-align:center; */
+    
 }
 .righty {
     display: flex;

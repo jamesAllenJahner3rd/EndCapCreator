@@ -51,7 +51,7 @@ window.onload = displayClock();
 function displayClock(){
   let time = new Date()
   let hours =time.getHours();
-  let minutes =time.getMinutes();
+  let minutes =time.getMinutes().toString().padStart(2,"0");
   console.log( time,hours,minutes);
   if (hours ===0){
     hours = 12;
