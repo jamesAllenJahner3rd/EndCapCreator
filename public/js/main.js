@@ -46,3 +46,15 @@ document.addEventListener('DOMContentLoaded',function(){
         }
         }
 })
+window.onload = displayClock();
+function displayClock(){
+  let time = new Date()//.getTime();
+  let hours =time.getHours();
+  let minutes =time.getMinutes();
+  console.log( time,hours,minutes);
+  //toLocaleTimeString("en-US", {
+   // hour: "numeric", minute:"2-digit"
+//
+  document.querySelector("time").innerHTML = `${hours}:${minutes}`;
+  setTimeout(displayClock, 60000); 
+}

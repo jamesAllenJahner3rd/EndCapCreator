@@ -1,8 +1,8 @@
 html{
     font-size: 62.5%;
 }
-nav{
-    
+nav,time,header{
+    color: #fff;
     background-color: #125dd0;
 }
 form{
@@ -21,7 +21,11 @@ button,select,input{
     font-size:3rem;
 }
 /*Base Styles*/
-
+#printIcon,#magGlassIcon,#backArrowIcon{
+    background-color: #125dd0;
+    border: none;
+    /* display: block; */
+}
 /*Layout*/
 
 /*Sizes*/
