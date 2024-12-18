@@ -9,14 +9,30 @@
 </head>
 <body>
     <header>
-        <time></time>
-    <Nav>
-        <button id ="backArrowIcon"><img src="/images/backArrow.png" width ='40px' height = '40px'></button>
-        <span>EndCap Creator</span>
-        <button id ="magGlassIcon"><img width ='40px' height = '40px' src='/images/magnifying-glass.png'></button>
-        <button id= 'printIcon'><img width ='40px' height="40px" src="/images/printer.png"> </button>
-    </Nav>
-</header>
+        <div class = "statusBar">
+            <span class = "lefty">
+                <time></time>
+                <img src="/images/moon.png" width ='12px' height = '12px'>
+                <img src="/images/facebook.png" width ='12px' height = '12px'>
+                <img src="/images/facebook_white.png" width ='12px' height = '12px'>
+                <img src="/images/dot.png" width ='12px' height = '12px'>
+            </span>
+            <span class = "righty">
+                <img src="/images/key.png" width ='12px' height = '12px'>
+                <img src="/images/suitcase.png" width ='12px' height = '12px'>
+                <img src="/images/wifi_both.png" width ='12px' height = '12px'>
+                <img src="/images/signal.png" width ='12px' height = '12px'>
+                <span id="batteryPercentage">100%</span>
+                <img  src="/images/battery_full.png" width ='12px' height = '12px'>
+            </span>
+        </div>
+        <Nav>
+            <button id ="backArrowIcon"><img src="/images/back_arrow.png" width ='20px' height = '20px'></button>
+            <span>EndCap Creator</span>
+            <button id ="magGlassIcon"><img width ='20px' height = '20px' src='/images/magnifying-glass.png'></button>
+            <button id= 'printIcon'><img width ='20px' height="20px" src="/images/printer.png"> </button>
+        </Nav>
+    </header>
     <form id="volumeForm">      
         <label for="heightSelect">Endcap Height</label>
         <select name="height" id="heightSelect">

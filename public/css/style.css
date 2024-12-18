@@ -26,8 +26,47 @@ button,select,input{
     border: none;
     /* display: block; */
 }
+header{
+    font-size: 1.7rem;
+   
+}
+time{
+    font-size: 17px;
+}
 /*Layout*/
 
+.statusBar{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+    
+}
+time{
+
+    align-self: bottom;
+    text-align:center;
+    color: green;
+}
+.righty {
+    display: flex;
+    justify-content:flex-end ;
+    align-items: center;
+    flex-grow: 1;
+    width: 49%;
+    flex-wrap: wrap;
+}
+.lefty {
+    display: flex;
+    justify-content:flex-start ;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    width: 49%;
+}
+nav{
+    display: block;
+}
 /*Sizes*/
 
 /*Skin Styles*/
