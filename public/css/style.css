@@ -1,5 +1,6 @@
 html{
     font-size: 62.5%;
+    line-height: 22px ;
 }
 nav,time,header{
     color: #fff;
@@ -39,7 +40,8 @@ time{
     display: flex;
     justify-content:center;
     align-items: center;
-    
+    margin-left:  4rem;
+    margin-right:  1rem;
     
 }
 time{
@@ -58,12 +60,24 @@ time{
 }
 .lefty {
     display: flex;
-    justify-content:flex-start ;
-    align-items: center;
+    /* justify-content:flex-start ; */
+    /* align-items: center; */
     flex-grow: 1;
     flex-wrap: wrap;
     width: 49%;
 }
+.lefty  > *{
+    padding: 1px;
+    margin-right:  .25rem;
+}
+.righty  > *{
+    padding: 1px;
+    margin-left:  .25rem;
+}
+.righty div{
+    width:fit-content
+}
+
 nav{
     display: block;
 }
