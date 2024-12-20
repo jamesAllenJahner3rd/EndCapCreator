@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Api</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+    <img id="overlay" src="/images/item-image.jpg" alt="">
+    <header>
+        <div class = "statusBar">
+            <span class = "lefty">
+                <time></time>
+                <img src="/images/moon.png" width ='12px' height = '12px'alt="">
+                <img src="/images/facebook.png" width ='12px' height = '12px'alt="">
+                <img src="/images/facebook_white.png" width ='12px' height = '12px'alt="">
+                <img src="/images/dot.png" width ='12px' height = '12px'alt="">
+            </span>
+            <span class = "righty">
+                <img src="/images/key.png" width ='12px' height = '12px'alt="">
+                <img src="/images/suitcase.png" width ='12px' height = '12px'alt="">
+                <img src="/images/wifi_both.png" width ='12px' height = '12px'alt="">
+                <img src="/images/signal.png" width ='12px' height = '12px'alt="">
+                <div>
+                     <span id="batteryPercentage">100%</span><!-- 
+                    --><img  src="/images/battery_full.png" width ='12px' height = '12px'alt="">
+                </div>
+            </span>
+        </div>
+        <Nav>
+            <button id ="backArrowIcon"><img src="/images/back_arrow.png" width ='20px' height = '20px'alt=""></button>
+            <span>EndCap Creator</span>
+            <button id ="magGlassIcon"><img width ='20px' height = '20px' src='/images/magnifying-glass.png'alt=""></button>
+            <button id= 'printIcon'><img width ='20px' height="20px" src="/images/printer.png"alt=""> </button>
+        </Nav>
+    </header>
+    <form id="volumeForm">      
+        <label for="heightSelect">Endcap Height</label>
+        <select name="height" id="heightSelect">
+            <option value="71" selected>71"</option>
+            <option value ="54">54"</option> 
+        </select>
+        <label for ="shelfWidthSelect">Endcap Width</label>
+        <select name="shelfWidth" id="shelfWidthSelect">
+            <option value="60">60"</option>
+            <option value ="48" selected>48"</option>
+            <option value ="36" >36"</option>
+            <option value="30">30"</option>
+            <option value="24">24"</option>
+        </select>
+        <label for="shelfDepthSelect">Endcap Depth</label>
+        <select name="shelfDepth" id="shelfDepthSelect">
+            <option value="24">24"</option>
+            <option value ="18">18"</option>
+            <option value ="16" >16"</option>
+            <option value="14" selected>14"</option>
+        </select>
+        
+            <input type="submit" value="Check stock">
+     </form>
+     <caption>Items available</caption>
+    <ol id='responseMenu'>
+        
+       
+
+    </ol>
+    <script type="text/javascript" src='js/main.js'></script>
+</body>
+</html>

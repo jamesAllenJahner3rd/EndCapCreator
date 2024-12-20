@@ -50,3 +50,5 @@ ehthumbs_vista.db
 *.tmp
 *.bak
 *.swp
+public/images/button_example.jpg
+public/images/item-image.jpg
