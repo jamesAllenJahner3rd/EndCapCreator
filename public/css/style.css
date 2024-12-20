@@ -42,6 +42,7 @@ time{
     align-items: center;
     margin-left:  4rem;
     margin-right:  1rem;
+    padding-top: 1.5rem;
     
 }
 time{
@@ -86,3 +87,10 @@ nav{
 /*Skin Styles*/
 
 /*Utility Classes*/
+#overlay{
+    width: 100%;
+    
+    opacity: 50%;
+    display: block;
+    position: fixed;
+}
