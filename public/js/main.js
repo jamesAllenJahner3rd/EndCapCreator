@@ -10,10 +10,9 @@ document.addEventListener('DOMContentLoaded',function(){
     volumeForm.onsubmit = async(event) => { 
         document.getElementById('responseMenu').textContent = "Form Triggered";
         event.preventDefault();
-        let endcapHeight = document.getElementById("heightSelect").value;
-        let height = document.getElementById("heightSelect").value;
-        let width = document.getElementById("shelfWidthSelect").value;
-        let depth = document.getElementById("shelfDepthSelect").value;
+        let height = document.querySelector("input[name='shelfHeight']:checked").value;
+        let width = document.querySelector("input[name='shelfWidth']:checked").value;
+        let depth = document.querySelector("input[name='shelfDepth']:checked").value;
         let shelfVolume  = depth*width*2.5;
         let USDollar = new Intl.NumberFormat('en-US', {
             style: 'currency',
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded',function(){
         try{
             console.log("await response");
 
-                const response  = await fetch(`/api/checkInventory/${volume}&${endcapHeight}&${shelfVolume}`);
+                const response  = await fetch(`/api/checkInventory/${volume}&${height}&${shelfVolume}`);
                 if(!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
