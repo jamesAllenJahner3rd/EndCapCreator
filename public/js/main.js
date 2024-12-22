@@ -49,13 +49,17 @@ document.addEventListener('DOMContentLoaded',function(){
 //Display aworking clock
 window.onload = displayClock();
 function displayClock(){
-  let time = new Date()
-  let hours =time.getHours();
-  let minutes =time.getMinutes().toString().padStart(2,"0");
-  console.log( time,hours,minutes);
-  if (hours ===0){
-    hours = 12;
-};
-  document.querySelector("time").innerHTML = `${hours}:${minutes}`;
-  setTimeout(displayClock, 60000); 
+    let time = new Date()
+    let hours =time.getHours();
+    let minutes =time.getMinutes().toString().padStart(2,"0");
+    //correct the hours format.
+    if (hours ===0){
+        hours = 12;
+    }
+    if (hours >12){
+        hours -= 12;
+    }
+    
+    document.querySelector("time").innerHTML = `${hours}:${minutes}`;
+    setTimeout(displayClock, 60000); 
 }
