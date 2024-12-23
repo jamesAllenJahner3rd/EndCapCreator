@@ -1,5 +1,5 @@
 console.log("JavaScript file waiting!");
-document.addEventListener('DOMContentLoaded',function(){ 
+document.addEventListener('DOMContentLoaded',async function(){ 
 
     console.log("JavaScript file loaded!");
     const volumeForm = document.getElementById("volumeForm")
@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded',function(){
         console.error("Required DOM elements not found");
     };
     volumeForm.onsubmit = async(event) => { 
-        document.getElementById('responseMenu').textContent = "Form Triggered";
+        let responseMenu = document.getElementById('responseMenu')
+        console.log("Form Triggered")
         event.preventDefault();
         let height = document.querySelector("input[name='shelfHeight']:checked").value;
         let width = document.querySelector("input[name='shelfWidth']:checked").value;
@@ -21,28 +22,59 @@ document.addEventListener('DOMContentLoaded',function(){
         let volume = height*width*depth;
         try{
             console.log("await response");
-
-                const response  = await fetch(`/api/checkInventory/${volume}&${height}&${shelfVolume}`);
-                if(!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                console.log(data);
-
-                data.forEach((item) => {
-                    let lineItem = document.createElement('li');
-                    console.log(lineItem);
-                    let button = document.createElement("button");
-                    console.log(button);
-                    let newContent = document.createTextNode( `${item.name} Margin: ${USDollar.format(item.profit)}`)
-                    console.log(newContent);
-                    lineItem.appendChild( newContent);
-                    console.log(lineItem);
-                    orderedList.appendChild( lineItem );
-                });
+            const response  = await fetch(`/api/checkInventory/${volume}&${height}&${shelfVolume}`);
+            if(!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            console.log(data);
+            data.forEach((item) => {
+                let lineItem = document.createElement('li');
+                console.log(lineItem);
+                let button = document.createElement("button");
+                console.log(button);
+                let newContent = document.createTextNode( `${item.name} Margin: ${USDollar.format(item.profit)}`)
+                console.log(newContent);
+                lineItem.appendChild( newContent);
+                console.log(lineItem);
+                orderedList.appendChild( lineItem );
+            });
         }catch(err){
             console.error('Error', err);
         }
+    }
+    try {
+        console.log("Battery Module  loaded!");
+        const battery = await navigator.getBattery();
+        function updateAllBatteryInfo() {
+              updateChargeInfo();
+              updateLevelInfo();
+              updateChargingInfo();
+              updateDischargingInfo();
+        }
+        updateAllBatteryInfo();
+        battery.addEventListener("chargingchange", updateChargeInfo);
+        battery.addEventListener("levelchange", updateLevelInfo);
+        battery.addEventListener("chargingtimechange", updateChargingInfo);
+        battery.addEventListener("dischargingtimechange", updateDischargingInfo);
+        function updateChargeInfo() {
+            console.log(`Battery charging? ${battery.charging ? "Yes" : "No"}`);
+        }
+        function updateLevelInfo() {
+            console.log(`Battery level: ${battery.level * 100}%`);
+            document.getElementById("batteryPercentage").innerText = battery.level;
+        }
+        function updateChargingInfo() {
+            console.log(`Battery charging time: ${battery.chargingTime} seconds`);
+            
+        }
+        function updateDischargingInfo() {
+            console.log(`Battery discharging time: ${battery.dischargingTime} seconds`);
+        }
+        // Use setInterval to periodically update the battery info
+        setInterval(updateAllBatteryInfo, 60000);
+        } catch (error) {
+            console.error('Error fetching battery information', error);
         }
 })
 //Display aworking clock
@@ -74,47 +106,5 @@ function goFullscreen() {
     }
   }
   //goFullscreen()
-  console.log("JavaScript file waiting!");
-
-  document.addEventListener('DOMContentLoaded', async function() {
-      console.log("JavaScript file loaded!");
-  
-      try {
-          const battery = await navigator.getBattery();
-          function updateAllBatteryInfo() {
-              updateChargeInfo();
-              updateLevelInfo();
-              updateChargingInfo();
-              updateDischargingInfo();
-          }
-          updateAllBatteryInfo();
-  
-          battery.addEventListener("chargingchange", updateChargeInfo);
-          battery.addEventListener("levelchange", updateLevelInfo);
-          battery.addEventListener("chargingtimechange", updateChargingInfo);
-          battery.addEventListener("dischargingtimechange", updateDischargingInfo);
-  
-          function updateChargeInfo() {
-              console.log(`Battery charging? ${battery.charging ? "Yes" : "No"}`);
-          }
-  
-          function updateLevelInfo() {
-              console.log(`Battery level: ${battery.level * 100}%`);
-          }
-  
-          function updateChargingInfo() {
-              console.log(`Battery charging time: ${battery.chargingTime} seconds`);
-            //   document.getElementById("batteryPercentage").innerText = battery.chargingTime
-          }
-  
-          function updateDischargingInfo() {
-              console.log(`Battery discharging time: ${battery.dischargingTime} seconds`);
-          }
-  
-          // Use setInterval to periodically update the battery info
-          setInterval(updateAllBatteryInfo, 60000);
-      } catch (error) {
-          console.error('Error fetching battery information', error);
-      }
-  });
+      
   
