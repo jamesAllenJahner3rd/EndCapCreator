@@ -73,4 +73,48 @@ function goFullscreen() {
       document.documentElement.msRequestFullscreen();
     }
   }
-  goFullscreen()
+  //goFullscreen()
+  console.log("JavaScript file waiting!");
+
+  document.addEventListener('DOMContentLoaded', async function() {
+      console.log("JavaScript file loaded!");
+  
+      try {
+          const battery = await navigator.getBattery();
+          function updateAllBatteryInfo() {
+              updateChargeInfo();
+              updateLevelInfo();
+              updateChargingInfo();
+              updateDischargingInfo();
+          }
+          updateAllBatteryInfo();
+  
+          battery.addEventListener("chargingchange", updateChargeInfo);
+          battery.addEventListener("levelchange", updateLevelInfo);
+          battery.addEventListener("chargingtimechange", updateChargingInfo);
+          battery.addEventListener("dischargingtimechange", updateDischargingInfo);
+  
+          function updateChargeInfo() {
+              console.log(`Battery charging? ${battery.charging ? "Yes" : "No"}`);
+          }
+  
+          function updateLevelInfo() {
+              console.log(`Battery level: ${battery.level * 100}%`);
+          }
+  
+          function updateChargingInfo() {
+              console.log(`Battery charging time: ${battery.chargingTime} seconds`);
+            //   document.getElementById("batteryPercentage").innerText = battery.chargingTime
+          }
+  
+          function updateDischargingInfo() {
+              console.log(`Battery discharging time: ${battery.dischargingTime} seconds`);
+          }
+  
+          // Use setInterval to periodically update the battery info
+          setInterval(updateAllBatteryInfo, 60000);
+      } catch (error) {
+          console.error('Error fetching battery information', error);
+      }
+  });
+  
