@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded',async function(){
         }
         function updateLevelInfo() {
             console.log(`Battery level: ${battery.level * 100}%`);
-            document.getElementById("batteryPercentage").innerText = battery.level;
+            document.getElementById("batteryPercentage").innerText = `${battery.level*100} %`;
         }
         function updateChargingInfo() {
             console.log(`Battery charging time: ${battery.chargingTime} seconds`);
