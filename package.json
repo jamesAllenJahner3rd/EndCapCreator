@@ -14,10 +14,19 @@
   "dependencies": {
     "express": "^4.21.1",
     "morgan": "^1.10.0",
+    "node": "^23.5.0",
+    "node.js": "^0.0.1-security",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "webpack": "^5.97.1",
     "webpack-cli": "^5.1.4"
-  }
+  },
+  
+    "verbose": true,
+    "watch": ["src/**/*.ts"],
+    "exec": "ts-node ./src/index.ts",
+    "pollingInterval": 100,
+    "legacyWatch": true
+   
 }

@@ -6,7 +6,7 @@ html{
 }
 body{
     font-size: 3rem;
-    background-color: #b5b5b7;
+    background-color: #f8f8f8;
 }
 header{
     color: #fff;
@@ -41,7 +41,7 @@ h1{
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-bottom: 1px solid #b6b6b8;;
+    border-bottom: 1px solid #f8f8f8;;
 
     margin: 0;
 
@@ -56,6 +56,44 @@ h1{
     width: 2.4rem;
     height: 2.4rem;
     padding-right: 1.5rem;
+}
+ol {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+}
+ol > li {
+    justify-content: center;
+    font-size: 1.5rem;
+   font-family: 'Roboto','sans-serif';
+    background-color: #fff;
+    height: max-content;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #ddd;
+    
+    }
+ol ul li{
+    text-indent: 4rem;
+    /* text-align: justify; */
+    list-style-type: none;
+    
+}
+
+#responseMenu li{
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+li ul{
+    display:inline ;
+    border-bottom: 1px solid #b5b5b7;
+}
+body ol#responseMenu{
+    padding-inline-start:0;
+    padding: 0;
+    list-style-position: inside;
 }
 
 /*Layout*/
@@ -150,10 +188,11 @@ nav{
 /*Skin Styles*/
 
 /*Utility Classes*/
-#overlay{
+.overlay{
     width: 100%;
-    top:-30%;
-    opacity: 20%;
+    top:0%;
+    opacity: 100%;
     display: block;
     position: fixed;
+    visibility: hidden !important;
 }

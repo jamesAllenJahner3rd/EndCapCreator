@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded',async function(){
     };
     volumeForm.onsubmit = async(event) => { 
         let responseMenu = document.getElementById('responseMenu')
+
         console.log("Form Triggered")
         event.preventDefault();
         let height = document.querySelector("input[name='shelfHeight']:checked").value;
@@ -27,17 +28,75 @@ document.addEventListener('DOMContentLoaded',async function(){
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
+console.log(responseMenu.parentNode)
+            while (responseMenu.hasChildNodes()){
+                responseMenu.removeChild(responseMenu.firstChild
+
+                )
+            }
             console.log(data);
             data.forEach((item) => {
                 let lineItem = document.createElement('li');
+                
+                let itemImage = document.createElement('img');
+                let nameItem = document.createElement('th');
+                let newItem = document.createTextNode( `${item.name} `);
+                lineItem.appendChild( newItem);
+                let marginRow = document.createElement("tr");
+                let marginWord = document.createElement('th');
+                let marginItem = document.createElement('td');
+                let margin = document.createTextNode(`Margin ${USDollar.format(item.profit)}`)
+                marginItem.appendChild( margin);
+
+                let priceRow = document.createElement("tr");
+                let priceWord = document.createElement('th');
+                let priceItem = document.createElement('td');
+                let price = document.createTextNode(`Price ${USDollar.format(item.price)}`)
+                priceItem.appendChild( price );
+                lineItem.appendChild( priceItem);
+ 
+                let onHandRow = document.createElement("tr");
+                let onHandWord = document.createElement('th');
+                let onHandItem = document.createElement('td');
+                let onHands = document.createTextNode(`On hand ${USDollar.format(item.onHand)}`)
+                onHandItem.appendChild( onHands );
+                lineItem.appendChild( onHandItem);
+
+                let upcRow = document.createElement("tr");
+                let upcWord = document.createElement('th');
+                let upcItem = document.createElement('td');
+                let upc = document.createTextNode(`UPC ${item.UPC}`)
+                upcItem.appendChild( upc );
+                lineItem.appendChild( upcItem);
+
+                let itemRow = document.createElement("tr");
+                let itemWord = document.createElement("th");
+                let itemInfo = document.createElement("td");
+                lineItem.appendChild( itemInfo);
+
                 console.log(lineItem);
                 let button = document.createElement("button");
                 console.log(button);
-                let newContent = document.createTextNode( `${item.name} Margin: ${USDollar.format(item.profit)}`)
-                console.log(newContent);
-                lineItem.appendChild( newContent);
-                console.log(lineItem);
+                
                 orderedList.appendChild( lineItem );
+                
+
+
+                
+
+                console.log(newItem);
+                //itemInfo.appendChild(nameItem);
+                
+                //itemInfo.appendChild(marginItem);
+
+
+
+
+
+
+
+                // console.log(lineItem);
+
             });
         }catch(err){
             console.error('Error', err);
@@ -62,7 +121,7 @@ document.addEventListener('DOMContentLoaded',async function(){
         }
         function updateLevelInfo() {
             console.log(`Battery level: ${battery.level * 100}%`);
-            document.getElementById("batteryPercentage").innerText = `${battery.level*100} %`;
+            document.getElementById("batteryPercentage").innerText = `${battery.level*100}%`;
         }
         function updateChargingInfo() {
             console.log(`Battery charging time: ${battery.chargingTime} seconds`);
