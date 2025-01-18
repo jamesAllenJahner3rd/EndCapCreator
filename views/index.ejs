@@ -47,8 +47,7 @@
         </div>
         </Nav>
     </header>
-    <form id="volumeForm"class="radioForm" >
-        <!-- action="/submit" method="post" >       -->
+    <form id="volumeForm"class="radioForm" action="/submit" method="GET" >      
         <fieldset class="shelfDimensionsSelect">
             <ul class="radioWrapper">
                 <li><legend class="radioLegend"><img src="/images/height-icon.png" alt="Width of the Endcap"  >Endcap Height</legend></li>
@@ -75,11 +74,21 @@
             <li><input type='radio' name="shelfDepth"  class="radioValue"  value="14" checked>14"</li>
             </ul>
         </fieldset>
-            <input type="submit" value="Check stock">
+            <input type="submit" value="checkStock">
      </form>
      <h6>Items available</h6>
     <ol id='responseMenu'>
-        
+        <li>Tonka Steel Classic Mighty Dump Truck 
+            <tr>
+                <th>Price</th> <td>$39.99 ea</td>
+            </tr>
+            <tr>
+                <th>OnHand</th><td>35</td>
+            </tr>
+             <tr>
+                <th>UPC</th> <td>334455667788</td>
+            </tr>
+        </li>
        
 
     </ol>
