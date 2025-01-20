@@ -4,6 +4,6 @@ const endcapController = require("../controllers/endcapController");
 
 router.get("/", /**ensureAuth, */ endcapController.getEndcap);
 
-router.get("/submit", /**ensureAuth, */ endcapController.searchInventory);
+// router.get("/submit", /**ensureAuth, */ endcapController.searchInventory);
 
 module.exports = router;

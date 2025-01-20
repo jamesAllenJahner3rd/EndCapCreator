@@ -1,17 +1,14 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const connectDB = async () => {
     try {
-        const conn =await mongoose.connect(process.env.MONGI_URI,{
-            useNewUrlParser: true, 
-            useUnitiedTopology: true,
-            useFindAndModify: false
-        })
-        console.log(`MongoDB Connected: ${conn.connection.host}` )
-    } catch(err){
-console.error(err)
-//The exit code. For string type, only integer strings '1' for failure or 0 for success 
-process.exit(1)
+        console.log('Connecting to MongoDB...');
+        const conn = await mongoose.connect(process.env.DB_STRING);
+        console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (err) {
+        console.error('Database Connection Error:', err.message);
+        process.exit(1); // Exit with failure
     }
-}
-module.exports = connectDB
+};
+
+module.exports = connectDB;

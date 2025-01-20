@@ -1,20 +1,19 @@
 const express = require('express');
 const app = express();
 const mongoose = require("mongoose");
-// const passport = require("passport");
-// const session = require("express-session");
-// const MongoStore = require('connect-mongo')
-// const flash = require("express-flash");
+const passport = require("passport");
 //help with logging issues
 const logger = require("morgan");
 //Allows the use  of put and delete in forms.
 const methodOverride = require("method-override");
+const path = require('path');
+const endcapRoutes = require('./routers/endcapRoutes');
 
 
-const endcapRoutes = require('./routes/endcapRoutes');
-//const profileRoutes = require('./routes/profileRoutes');
-//const loginRoutes = require('./routes/loginRoutes');
-//const postRoutes = require("./routes/postRoutes");
+
+ const session = require("express-session");
+ const MongoStore = require('connect-mongo')
+ const flash = require("express-flash");
 
 //Defines a paths to the env file to hide important info
 require('dotenv').config({ path: './config/.env' });
@@ -22,7 +21,8 @@ require('dotenv').config({ path: './config/.env' });
 const connectDB = require("./config/database");
 
 const PORT = process.env.PORT || 8000;
-
+connectDB();
+const filePath = path.join(__dirname, 'public', 'inventory.json');
 
 //Define the folder that can be available to the website
 app.use(express.static('public'));
@@ -39,8 +39,8 @@ app.use(express.json());
     })
 );*/
 // Passport middleware for verifing users
-app.use(passport.initialize());
-app.use(passport.session());
+//app.use(passport.initialize());
+//app.use(passport.session());
 //This is the main route for the endcap app to orgranize the request.
 app.use('/', endcapRoutes);
 
