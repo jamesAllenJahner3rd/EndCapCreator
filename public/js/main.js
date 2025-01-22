@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded',async function(){
         let responseMenu = document.getElementById('responseMenu')
 
         console.log("Form Triggered")
-        event.preventDefault();
+        //event.preventDefault();
         let height = document.querySelector("input[name='shelfHeight']:checked").value;
         let width = document.querySelector("input[name='shelfWidth']:checked").value;
         let depth = document.querySelector("input[name='shelfDepth']:checked").value;

@@ -1,8 +1,7 @@
-const { default: mongoose } = require("mongoose");
-//const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 //ai get's rid of this.\/
 const InventorySchema = new mongoose.Schema({
-    
+        
         "name": {
             type: String,
             required: true,
@@ -95,6 +94,9 @@ const InventorySchema = new mongoose.Schema({
             type: Number,
             required: true,
         }
-})
-// const Inventory = mongoose.model('Inventory', InventorySchema); 
-// module.exports = Inventory;
+    },
+        {
+            collection: 'inventory_toys' 
+        })
+ const Inventory = mongoose.model('Inventory', InventorySchema); 
+ module.exports = Inventory;

@@ -23,7 +23,7 @@ const connectDB = require("./config/database");
 const PORT = process.env.PORT || 8000;
 connectDB();
 const filePath = path.join(__dirname, 'public', 'inventory.json');
-
+console.log("server triggered");
 //Define the folder that can be available to the website
 app.use(express.static('public'));
 //used the parse the 'Body" from the data from the client-side
@@ -43,7 +43,7 @@ app.use(express.json());
 //app.use(passport.session());
 //This is the main route for the endcap app to orgranize the request.
 app.use('/', endcapRoutes);
-
+app.use('/api', endcapRoutes);
 // app.get("/", (req, res) => {
 //     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 //});
