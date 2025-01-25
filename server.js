@@ -8,7 +8,7 @@ const logger = require("morgan");
 const methodOverride = require("method-override");
 const path = require('path');
 const endcapRoutes = require('./routers/endcapRoutes');
-
+app.set('view engine', 'ejs');
 
 
  const session = require("express-session");
