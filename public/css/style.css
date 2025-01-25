@@ -64,8 +64,21 @@ ol {
     margin: 0 auto;
     align-items: center;
 }
+.itemDescr{
+    font-size: 1.5rem;
+    font-family: 'Roboto','sans-serif';
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+}
+#responseMenu li.lineitem{
+    flex-direction: row;
+}
+#itemTable{
+    flex-direction: column;
+}
 ol > li {
-    justify-content: center;
+   
     font-size: 1.5rem;
    font-family: 'Roboto','sans-serif';
     background-color: #fff;
@@ -79,13 +92,23 @@ ol ul li{
     text-indent: 4rem;
     /* text-align: justify; */
     list-style-type: none;
-    
 }
-
+#itemImg{
+    display: flex;
+    flex: ;
+    flex-direction:row;
+}
+th{
+color:#9b9b9b ;
+font-weight: 300;
+font-size: 1.3rem;
+}
 #responseMenu li{
+    display: flex ;
     margin-bottom: 1rem;
     flex-direction: column;
 }
+
 li ul{
     display:inline ;
     border-bottom: 1px solid #b5b5b7;
@@ -144,7 +167,8 @@ nav .righty{
      justify-content:flex-start;
     flex-grow: 1;
     flex-wrap: wrap;
-    left: 16%;
+    /* left: 16%; */
+    margin-left: 1rem;
     height: fit-content;
 }
 .lefty  > *{

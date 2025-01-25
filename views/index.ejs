@@ -88,23 +88,38 @@
                 <li><input type='radio' name="shelfDepth" class="radioValue" value="14" checked>14"</li>
             </ul>
         </fieldset>
-        <input type="submit" value="checkStock">
+        <button value="checkStock">Check Stock</button>
     </form>
     <h6>Items available</h6>
     <ol id='responseMenu'>
-            <% for(var i=0; i<suggestedItems.length; i++){%>
-        <li class ='lineitem'> <%= suggestedItems[i].name %>
-            <tr>
-                <th>Price</th> <td>$ <%= suggestedItems[i].price %> ea</td>
-            </tr>
-            <tr>
-                <th>OnHand</th><td> <%=suggestedItems[i].onHand %></td>
-            </tr>
-             <tr>
-                <th>UPC</th> <td> <%=suggestedItems[i].UPC %></td>
-            </tr>
-        </li>
-       <% } %> 
+        <% for(var i=0; i<suggestedItems.length; i++){%>
+            <li class='lineitem'>
+                <img src='<%= suggestedItems[i].img %>' alt="A placeholder Image" class='itemImg' width="100px" height="100px">
+                <table class="itemTable">
+                    <tr>
+                        <th class="itemDescr" colspan=2>
+                            <%= suggestedItems[i].productDescr %>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Price</th>
+                        <td>$ <%= suggestedItems[i].price %> ea</td>
+                    </tr>
+                    <tr>
+                        <th>On hand</th>
+                        <td>
+                            <%=suggestedItems[i].onHand %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>UPC</th>
+                        <td>
+                            <%=suggestedItems[i].UPC %>
+                        </td>
+                    </tr>
+                </table>
+            </li>
+            <% } %>
 
     </ol>
     <script type="text/javascript" src='js/main.js'></script>

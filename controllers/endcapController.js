@@ -7,13 +7,14 @@ module.exports = {
     searchInventory: async (req,res)=>{
         const { shelfHeight, shelfWidth, shelfDepth } = req.query;
         const volume = shelfHeight * shelfWidth * shelfDepth; 
-        console.log(`Calculated Volume: ${volume}`);
+        // console.log(`Calculated Volume: ${volume}`);
         try {
             console.log("Trying to parse JSON data");
             const jsonData = await Inventory.find({}).sort({profit:"desc"}).lean();
-            console.log(`jsonData: ${jsonData}`);
+            //console.log(`jsonData: ${jsonData}`);
 
-            //console.log("JSON data:", jsonData);
+            // console.log("JSON data:", jsonData.map(item => item.name));
+                // .find(item=>item.name));
             if (!jsonData || !jsonData.length) { 
                 console.error("No inventory found."); 
                 return res.status(404).json({
@@ -27,7 +28,7 @@ module.exports = {
             suggestedItems.forEach(item => {
                 item['shelfTotal'] = shelfHeight / (item.height + 2.5) - 1;
             });
-            console.error('suggestedItems',suggestedItems); 
+            //console.log('suggestedItems',suggestedItems); 
             //suggestedItems = suggestedItems.sort((a, b) => b.profit - a.profit);
             const sampleData = [ { name: 'Sample Item 1', price: 10, onHand: 5, UPC: '12345' }, { name: 'Sample Item 2', price: 20, onHand: 3, UPC: '67890' }]
             //res.json(suggestedItems);

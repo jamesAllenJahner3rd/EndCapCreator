@@ -46,7 +46,7 @@ app.use('/', endcapRoutes);
 app.use('/api', endcapRoutes);
 // app.get("/", (req, res) => {
 //     res.sendFile(path.join(__dirname, 'public', 'index.html'));
-//});
+//}); 
 
 
 // Listens to activate teh server
