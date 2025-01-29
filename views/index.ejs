@@ -53,84 +53,31 @@
             </div>
         </Nav>
     </header>
-    <form id="volumeForm" class="radioForm" action="/api" method="GET">
-        <fieldset class="shelfDimensionsSelect">
-            <ul class="radioWrapper">
-                <li>
-                    <legend class="radioLegend"><img src="/images/height-icon.png" alt="Width of the Endcap">Endcap
-                        Height</legend>
-                </li>
-                <li><input type='radio' name="shelfHeight" class="radioValue" value="71" checked>71"</li>
-                <li><input type='radio' name="shelfHeight" class="radioValue" value="54">54"</li>
-            </ul>
-        </fieldset>
-        <fieldset class="shelfDimensionsSelect">
-            <ul class="radioWrapper">
-                <li>
-                    <legend class="radioLegend"><img src="/images/width-icon.png" alt="Width of the Endcap">Endcap Width
-                    </legend>
-                </li>
-                <li><input type='radio' name="shelfWidth" class="radioValue" value="60">60"</li>
-                <li><input type='radio' name="shelfWidth" class="radioValue" value="48">48"</li>
-                <li><input type='radio' name="shelfWidth" class="radioValue" value="36" checked>36" </li>
-                <li><input type='radio' name="shelfWidth" class="radioValue" value="30">30"</li>
-                <li><input type='radio' name="shelfWidth" class="radioValue" value="24">24"</li>
-            </ul>
-        </fieldset>
-        <fieldset class="shelfDimensionsSelect">
-            <ul class="radioWrapper">
-                <li>
-                    <legend class="radioLegend"><img src="/images/depth-icon.png" alt="Depth of the Endcap">Endcap Depth
-                    </legend>
-                </li>
-                <li><input type='radio' name="shelfDepth" class="radioValue" value="24">24"</li>
-                <li><input type='radio' name="shelfDepth" class="radioValue" value="18">18"</li>
-                <li><input type='radio' name="shelfDepth" class="radioValue" value="16">16" </li>
-                <li><input type='radio' name="shelfDepth" class="radioValue" value="14" checked>14"</li>
-            </ul>
+    <h1>Me@Walmart</h1>
+    <a class='link' href="/">Sign out</a>
+    <span>Hi James A Jahner</span>
+    <h1>Enter your PIN</h1>
+    <img src="/images/emptyCircle"><img src="/images/emptyCircle"><img src="/images/emptyCircle"><img src="/images/emptyCircle">
+    <form id="login"  action="/login" method="GET">
+        <fieldset class="">
+            
         </fieldset>
         
     </form>
-    <form id="reset"  action="/" method="GET">
-    
-    </form> 
-    <div class="buttonHolder"><button value="checkStock" id="checkStock" class="sculptedButton" onclick="submitForm('volumeForm')">Check Stock</button>
-    <button value="reset"class="sculptedButton" onclick="submitForm('reset')">Reset Creator</button>
-    </div>
-    
-    <div class="invertory"><img src="/images/box.png" width='21px' height='20px' alt="A moon Status icon"><h6>Items available</h6>
-    </div>
-    <ol id='responseMenu'>
-        <% for(var i=0; i<suggestedItems.length; i++){%>
-            <li class='lineitem'>
-                <img src='<%= suggestedItems[i].img %>' alt="A placeholder Image" class='itemImg' width="100px" height="100px">
-                <table class="itemTable">
-                    <tr>
-                        <th class="itemDescr" colspan=2>
-                            <%= suggestedItems[i].productDescr %>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>Price</th>
-                        <td>$ <%= suggestedItems[i].price %> ea</td>
-                    </tr>
-                    <tr>
-                        <th>On hand</th>
-                        <td>
-                            <%=suggestedItems[i].onHand %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>UPC</th>
-                        <td>
-                            <%=suggestedItems[i].UPC %>
-                        </td>
-                    </tr>
-                </table>
-            </li>
-            <% } %>
+    <form id=""  action="/" method="GET">
+    <table>
+        <tbody>
+            <tr><td>1</td><td>2</td><td>3</td></tr>
+            <tr><td>4</td><td>5</td><td>6</td></tr>
+            <tr><td>7</td><td>8</td><td>9</td></tr>
+            <tr><td></td><td>0</td><td>--</td></tr>
+        </tbody>
+        <tfoot>
+            <a class="link">Forgot PIN?</a>
+        </tfoot>
+    </table>
 
-    </ol>
+   
     <script type="text/javascript" src='js/main.js'></script>
 </body>
 
