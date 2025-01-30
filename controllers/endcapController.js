@@ -2,7 +2,7 @@ const Inventory = require("../models/inventory");
 console.log("controller triggered");
 module.exports = {
     getEndcap: (req,res)=>{
-        res.render('endcap.ejs', { suggestedItems: [] })
+        res.render('index.ejs', { suggestedItems: [] })
     },
     searchInventory: async (req,res)=>{
         const { shelfHeight, shelfWidth, shelfDepth } = req.query;
@@ -32,7 +32,7 @@ module.exports = {
             //suggestedItems = suggestedItems.sort((a, b) => b.profit - a.profit);
             const sampleData = [ { name: 'Sample Item 1', price: 10, onHand: 5, UPC: '12345' }, { name: 'Sample Item 2', price: 20, onHand: 3, UPC: '67890' }]
             //res.json(suggestedItems);
-             res.render('endcap.ejs',{suggestedItems:suggestedItems})
+             res.render('index.ejs',{suggestedItems:suggestedItems})
         } catch (parseErr) { 
             console.error("Error fetching data from the database: ", parseErr);
             res.status(500).json({ error: "Internal Server Error" });

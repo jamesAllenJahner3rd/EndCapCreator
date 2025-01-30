@@ -61,7 +61,7 @@ img[src*=box]{
     background-color: green;
    align-items: center;
     flex-direction: row;
-    text-self: middle;
+   
 }
 #printIcon,
 #magGlassIcon,

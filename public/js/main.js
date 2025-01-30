@@ -79,7 +79,24 @@ console.log(responseMenu.parentNode)
                 console.log(button);
                 
                 orderedList.appendChild( lineItem );
+                
+
+
+                
+
                 console.log(newItem);
+                //itemInfo.appendChild(nameItem);
+                
+                //itemInfo.appendChild(marginItem);
+
+
+
+
+
+
+
+                // console.log(lineItem);
+
             });
         }catch(err){
             console.error('Error', err);
@@ -104,7 +121,7 @@ console.log(responseMenu.parentNode)
         }
         function updateLevelInfo() {
             console.log(`Battery level: ${battery.level * 100}%`);
-            document.getElementById("batteryPercentage").innerText = `${Math.round(battery.level*100)}%`;
+            document.getElementById("batteryPercentage").innerText = `${battery.level*100}%`;
         }
         function updateChargingInfo() {
             console.log(`Battery charging time: ${battery.chargingTime} seconds`);
