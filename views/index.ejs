@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
     <title>Inventory Api</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,7 +19,7 @@
 <body>
 
 
-    <img class="overlay" src="../../images/item_button.jpg" alt="">
+    <img class="overlay" src="../../images/button_example.jpg" alt="">
 
     <header>
         <div class="statusBar">
@@ -88,9 +89,17 @@
                 <li><input type='radio' name="shelfDepth" class="radioValue" value="14" checked>14"</li>
             </ul>
         </fieldset>
-        <button value="checkStock">Check Stock</button>
+        
     </form>
-    <h6>Items available</h6>
+    <form id="reset"  action="/" method="GET">
+    
+    </form> 
+    <div class="buttonHolder"><button value="checkStock" id="checkStock" class="sculptedButton" onclick="submitForm('volumeForm')">Check Stock</button>
+    <button value="reset"class="sculptedButton" onclick="submitForm('reset')">Reset Creator</button>
+    </div>
+    
+    <div class="invertory"><img src="/images/box.png" width='21px' height='20px' alt="A moon Status icon"><h6>Items available</h6>
+    </div>
     <ol id='responseMenu'>
         <% for(var i=0; i<suggestedItems.length; i++){%>
             <li class='lineitem'>
