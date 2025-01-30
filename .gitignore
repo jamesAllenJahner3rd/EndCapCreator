@@ -3,7 +3,8 @@ node_modules/
 notes/
 # VS Code settings
 .vscode/
-
+public/images/button_example.jpg
+public/images/item-image.jpg
 # Environment variables
 .env
 
