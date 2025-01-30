@@ -1,4 +1,8 @@
 console.log("JavaScript file waiting!");
+function submitForm(formId, event) {
+    event.preventDefault(); // Prevent the default form submission
+    document.getElementById(formId).submit(); // Submit the specified form
+}
 document.addEventListener('DOMContentLoaded',async function(){ 
 
     console.log("JavaScript file loaded!");
