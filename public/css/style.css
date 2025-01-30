@@ -130,7 +130,6 @@ ol ul li {
 }
 #itemImg {
   display: flex;
-  flex: ;
   flex-direction: row;
 }
 th {
