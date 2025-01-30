@@ -6,6 +6,7 @@ const passport = require("passport");
 const logger = require("morgan");
 //Allows the use  of put and delete in forms.
 const methodOverride = require("method-override");
+const morgan = require("morgan");
 const path = require('path');
 const endcapRoutes = require('./routers/endcapRoutes');
 app.set('view engine', 'ejs');
@@ -22,6 +23,10 @@ const connectDB = require("./config/database");
 
 const PORT = process.env.PORT || 8000;
 connectDB();
+
+if (process.env.NODE_ENV ==='development'){
+    app. use(morgan('dev'))
+}
 const filePath = path.join(__dirname, 'public', 'inventory.json');
 console.log("server triggered");
 //Define the folder that can be available to the website
@@ -48,8 +53,12 @@ app.use('/api', endcapRoutes);
 //     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 //}); 
 
+if (process.env.NODE_ENV ==='development'){
+    app. use(morgan('dev'))
+    const PORT = process.env.PORT || 8000;
+} else {
+    const PORT = process.env.PORT_DB 
+}
 
 // Listens to activate teh server
-app.listen(PORT, () => {
-    console.log(`The server is running on ${PORT || 8000}`);
-});
+app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`));
